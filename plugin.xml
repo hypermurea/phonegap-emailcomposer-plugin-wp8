@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.hypermurea.phonegap.emailcomposer"
+    version="0.0.1">
+
+	<engines>
+		<engine name="cordova" version=">=3.0.0"/>
+	</engines>
+	
+	<name>EmailComposer plugin for WP8</name>
+	
+	<description>EmailComposer plugin for WP8</description>
+	<author>Jaakko Santala</author>
+	
+	<keywords>emailcomposer wp8</keywords>
+	<license></license>
+	
+	<js-module src="EmailComposer.js" name="EmailComposer">
+		<clobbers target="navigator.EmailComposer"/>
+	</js-module>
+	
+	<platform name="wp8">
+		<config-file target="config.xml" parent="/*">
+            <feature name="EmailComposer">
+                <param name="wp-package" value="EmailComposer"/>
+            </feature>
+        </config-file>
+		
+		<source-file src="src/EmailComposer.cs"/>		
+	</platform>
+	
+
+	
+</plugin>
